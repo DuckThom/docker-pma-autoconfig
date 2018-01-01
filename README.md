@@ -7,7 +7,7 @@ This image is meant for development environments and not for production/public s
 This image needs the Docker socket to be mounted, in most cases this can be achieved by adding it as a volume with `-v /var/run/docker.sock:/tmp/docker.sock:ro`. A full example:
 
 ```
-docker run -p 8080:80 -d -v /var/run/docker.sock:/tmp/docker.sock:ro elzekool/pma-autoconfig
+docker run -p 8080:80 -d -v /var/run/docker.sock:/tmp/docker.sock:ro lunamoonfang/docker-pma-autoconfig
 ```
 
 ## Connecting and configuring a MySQL container
