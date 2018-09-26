@@ -2,6 +2,8 @@ FROM phpmyadmin/phpmyadmin:latest
 
 MAINTAINER  Thomas Wiringa  <thomas.wiringa@gmail.com>
 
+WORKDIR /
+
 # Install wget and install/updates certificates
 RUN apk add --no-cache --virtual .run-deps \
     ca-certificates bash wget \
