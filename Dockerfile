@@ -3,9 +3,9 @@ FROM phpmyadmin/phpmyadmin:latest
 MAINTAINER  Thomas Wiringa  <thomas.wiringa@gmail.com>
 
 # Install wget and install/updates certificates
-RUN apk add --no-cache --virtual .run-deps \
-    ca-certificates bash wget \
-    && update-ca-certificates
+RUN apt-get update \
+ && apt-get install -y --no-install-recommends \
+    wget
 
 # Install Docker Gen
 ENV DOCKER_GEN_VERSION 0.7.3
