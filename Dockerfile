@@ -1,4 +1,4 @@
-FROM phpmyadmin/phpmyadmin:latest
+FROM phpmyadmin/phpmyadmin:fpm
 
 MAINTAINER  Thomas Wiringa  <thomas.wiringa@gmail.com>
 
@@ -17,6 +17,9 @@ RUN wget --quiet https://github.com/jwilder/docker-gen/releases/download/$DOCKER
 # Install Forego
 RUN wget --quiet https://github.com/jwilder/forego/releases/download/v0.16.1/forego -O /usr/local/bin/forego
 RUN chmod u+x /usr/local/bin/forego
+
+# Move PMA's entrypoint
+RUN mv /docker-entrypoint.sh /docker-entrypoint-pma.sh
 
 COPY docker-entrypoint.sh /docker-entrypoint.sh
 RUN chmod u+rwx /docker-entrypoint.sh
