@@ -1,4 +1,4 @@
-FROM phpmyadmin/phpmyadmin:fpm
+FROM phpmyadmin/phpmyadmin:4.9-fpm
 
 MAINTAINER  Thomas Wiringa  <thomas.wiringa@gmail.com>
 
